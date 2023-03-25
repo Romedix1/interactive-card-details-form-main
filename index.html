@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+
+    <title>Interactive Card Details Form Main</title>
+</head>
+<body>
+    
+    <main id="container">
+        <section id="top-content">
+            <article id="top-content-img-box">
+                <img id="card-front" src="images/bg-card-front.png" alt="front back">
+                
+                <img id="card-back" src="images/bg-card-back.png" alt="card back">
+                
+
+                <img id="card-logo" src="images/card-logo.svg" alt="card logo">
+                <p id="cvc">000</p>
+                <p id="card-number">0000 0000 0000 0000</p>
+
+                <div id="bottom-card-data">
+                    <p id="personal-data">JANE APPLESEED</p>
+
+                    <p id="expiry-date"><span id="month-date">00</span>/<span id="year-date">00</span></p>
+                </div>
+            </article>
+            <article id="top-content-white-box"></article>
+        </section>
+        <section id="bottom-content">
+
+            <article id="validation-correct">
+                <img id="icon-complete" src="images/icon-complete.svg" alt="form completed">
+
+                <h1 id="thanks">THANK YOU!</h1>
+
+                <p id="completed-form-note">We've added your card details</p>
+
+                <input type="button" id="continue-button" value="Continue">
+
+            </article>
+            
+            <form action="">
+
+                <label for="name-input" class="input-label">CARDHOLDER NAME</label>
+                <br>
+                <input class="full-size-input input" id="name-input" type="text" placeholder="e.g. Jane Appleseed">
+                <div id="name-error"></div>
+
+                <label for="number-input" class="input-label">CARD NUMBER</label>
+                <br>
+                <input class="full-size-input input" id="number-input"  maxlength="19" type="text" placeholder="e.g. 1234 5678 9123 0000">
+                <div id="number-error"></div>
+
+
+                <label for="data-input" class="input-label">EXP. DATE (MM/YY) </label>
+                <label for="cvc-input" class="input-label">CVC</label>
+
+                <br>
+
+                <input class="small-size-input first-input input data-input" id="month-input" type="text" maxlength="2" placeholder="MM">
+                <input class="small-size-input input data-input" type="text" id="year-input"  maxlength="2" placeholder="YY">
+                <input class="medium-size-input input" id="cvc-input" type="text" maxlength="3" placeholder="e.g. 123">
+                <span id="date-error"></span>
+                <span id="cvc-error"></span>
+                
+                <input type="submit" id="submit-button" value="Confirm">
+            </form>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
